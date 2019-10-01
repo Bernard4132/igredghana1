@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Igredghana</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+
+    <script src="https://use.fontawesome.com/fc6d352727.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:300,300i,400,500,500i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Asap+Condensed|Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <style type="text/css">
+	 a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+  /*.navbackground{
+    background-color: transparent;
+   
+  }*/
+
+  .navbackground{
+    background-color: rgba(254,254,254, 0.8);
+    -webkit-box-shadow: 0px 0px 35px -1px rgba(0,0,0,0.19);
+-moz-box-shadow: 0px 0px 35px -1px rgba(0,0,0,0.19);
+box-shadow: 0px 0px 35px -1px rgba(0,0,0,0.19);
+ z-index: 10;
+  }
+
+  .meffect{
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 0px 35px -1px rgba(0,0,0,0.89);
+-moz-box-shadow: 0px 0px 35px -1px rgba(0,0,0,0.89);
+box-shadow: 0px 0px 35px -1px rgba(0,0,0,0.89);
+ z-index: 10;
+}
+
+.navbar-brand1 {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+
+
+
+.navbar-light .navbar-brand1{
+
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+
+}
+
+.navbar-scroll{
+color: #000; 
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+  color: white;
+}
+
+.navbar-light .navbar-scroll:focus, .navbar-light .navbar-scroll:hover {
+  color: #343a40;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #4c4848;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: border-color .5s ease-in-out;
+    -webkit-transition: border-color .5s ease-in-out;
+    -moz-transition: border-color .5s ease-in-out;
+  border-bottom: 4px solid transparent;
+}
+
+.navlinkscroll{
+  color: #343a40;
+  
+}
+
+.navbar-light .navbar-nav .nav-link:focus {
+  color: #0f6524;
+  font-weight: 700;
+}
+
+ .navbar-light .navbar-nav .nav-link:hover {
+  color: #0f6524;
+  font-weight: 700;
+}
+
+.navbar-light .navbar-nav .nav-link.disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
+  color: #0f6524;
+  font-weight: 500;
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 150px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+hr.worksdivider{
+  height: 5px;
+  background-color: #ffcc00;
+  width: 15%;
+}
+
+.famwantyou{
+  height:560px;
+  background:linear-gradient(0deg,rgba(0,0,0,1),rgba(0,0,0,0.1)),url(http://res.cloudinary.com/nikasemo/image/upload/v1506587500/shutterstock_343468046_ffkoef.jpg);
+  background-size:cover;
+}
+
+.previtemcont{
+  width: 200px;
+  height: 200px;
+ 
+  margin-top: 20px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.zoomin img {
+  height: 110px;
+  width: 110px;
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+.zoomin img:hover {
+  width: 180px;
+  height: 180px;
+}
+
+.mainvps{
+  font-weight: bold;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  font-family: 'Asap Condensed', sans-serif;
+}
+
+.famwantyousecthome{
+  font-family: 'Righteous', cursive; 
+  color: white; 
+  font-size: 60px; 
+  text-shadow: 1px 0px 6px rgba(150, 150, 150, 1);
+  position: relative;
+  top: 180px;
+  margin-left: 100px;
+}
+
+.famwantyousecthome2{
+  font-family: 'Asap Condensed', 
+  sans-serif; 
+  letter-spacing: 2px;
+  position: relative;
+  top: 190px;
+  margin-left: 100px;
+  color: #ffffff;
+}
+
+.actreadm{
+   position: relative;
+  top: 200px;
+  margin-left: 100px;
+}
+
+.holdit {
+	background-color: #0f6524;
+	color: #ffffff;
+	padding: 7px;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 1rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: rgba(255, 255, 255, 0.85);
+  background-clip: padding-box;
+  border-radius: 0rem;
+}
+
+.dropdown-divider {
+  height: 0;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  border-top: 1px solid #e9ecef;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  height: 60px;
+  padding: 1.25rem 1.5rem;
+  clear: both;
+ color: #000000;
+  font-weight: 300;
+  font-family: 'Exo 2', sans-serif;
+  text-align: inherit;
+  white-space: nowrap;
+  background: none;
+  border: 0;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #0f6524;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #0f6524;
+}
+
+.dropdown-item.disabled, .dropdown-item:disabled {
+  color: #f5b822;
+  background-color: transparent;
+}
+
+.navbar-toggler {
+  border: none;
+  background: transparent !important;
+}
+.navbar-toggler:hover {
+  background: transparent !important;
+}
+.navbar-toggler .icon-bar {
+  display:block;
+  background-color: #640063;
+  width: 26px;
+  height: 2px;
+  transition: all 0.2s;
+}
+.navbar-toggler .icon-bar+.icon-bar{
+  margin-top: 5px;
+}
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+.navbar-toggler .middle-bar {
+  opacity: 0;
+}
+.navbar-toggler .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+}
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+.dropbtn1 {
+  display: block;
+  width: 100%;
+  height: 60px;
+  padding: 1.25rem 1.5rem;
+  clear: both;
+ color: #000000;
+  font-weight: 300;
+  font-family: 'Exo 2', sans-serif;
+  text-align: inherit;
+  white-space: nowrap;
+  background: none;
+  border: 0;
+}
+
+.dropbtn1:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #ff6701;
+}
+
+.dropdown1 {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content1 {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.85);
+  min-width: 260px;
+  color: #000000;
+  font-weight: 300;
+  font-family: 'Exo 2', sans-serif;
+  z-index: 1;
+  left: 120px;
+  padding: 0.5rem 0;
+  margin: 0rem 0 0;
+  -webkit-box-shadow: 0px 0px 35px -1px rgba(0,0,0,0.25);
+-moz-box-shadow: 0px 0px 35px -1px rgba(0,0,0,0.25);
+box-shadow: 0px 0px 35px -1px rgba(0,0,0,0.25);
+}
+
+.dropdown-content1 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content1 a:hover {
+  background-color: #ff6701;
+  color: #ffffff;
+  font-weight: 300;
+  width: 100%;
+}
+
+.dropdown1:hover .dropdown-content1 {
+  display: block;
+  width: 100%;
+}
+
+.dropdown1:hover .dropbtn1 {
+  background-color: #ff6701;
+  width: 100%;
+  color: #ffffff;
+}
+
+</style>
+
+  <body  style="font-family: 'Raleway', sans-serif;">
+
+  	<div class="row holdit">
+		<div class="col-lg-8">
+		<span style="margin-left: 20px;"><i class="fa fa-map-marker" aria-hidden="true" style="color: #e08d1e;"></i>
+		 18 Cosmos Street, Rehoboth Court Estate
+		</span>
+		<span style="margin-left: 20px;"><i class="fa fa-phone" aria-hidden="true" style="color: #e08d1e;"></i>
+		 0553393260 / 0553393260
+		</span>
+		<span style="margin-left: 20px;"><i class="fa fa-envelope-o" aria-hidden="true" style="color: #e08d1e;"></i>
+		 info@igred.org
+		</span>
+		</div>
+		<div class="col-lg-4">
+			<span style="margin-left: 20px;">
+				<a href="" style="color: #ffffff;">
+					<i class="fa fa-facebook" aria-hidden="true"></i>
+				</a>
+			</span>
+			<span style="margin-left: 20px;">
+				<a href="" style="color: #ffffff;">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+				</a>
+			</span>
+			<span style="margin-left: 20px;">
+				<a href="" style="color: #ffffff;">
+					<i class="fa fa-linkedin" aria-hidden="true"></i>
+				</a>
+			</span>
+			<span style="margin-left: 20px;">
+				<a href="" style="color: #ffffff;">
+					<i class="fa fa-youtube-play" aria-hidden="true"></i>
+				</a>
+			</span>
+		</div>
+	</div>
+
+  	<!-- Navigation -->
+    <nav class="navbar navbar-light navbar-expand-lg navbackground">
+      <div class="container">
+        <a class="navbar-brand1" href="/" style=""><img src="https://res.cloudinary.com/nikasemo/image/upload/v1569918130/igred1_gvdf2a.png" style="height: 61px; width: 250; margin-right:5px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About Us
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="/ourprofile">Our Profile</a>
+                <a class="dropdown-item" href="/heart">Heart of Igred</a>
+                <a class="dropdown-item" href="/mission">Mission</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/execboards">Executive Boards</a>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                What we do
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="/genderviolence">Gender Violence & Equality</a>
+                <a class="dropdown-item" href="/economicempowerment">Economic empowerment</a>
+                <a class="dropdown-item" href="/reproductivehealth">Reproductive Rights</a>
+                <a class="dropdown-item" href="/leadershipandpoliticalempowerment">Leadership & political empowerment</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/events">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/digitallibrary">Digital Library</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/partnerships">Partnerships</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <% if notice %>
+<div class="alert alert-success alert-dismissible" role="alert" style="position: absolute; top: 100px; z-index: 99999;>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <p class="notice"><%= notice %></p>
+</div>
+<% end %>
+
+    <%= yield %>
+
+
+        <style type="text/css">
+
+        .foothead {
+        	color: #ffffff;
+        }
+
+	.btncontactform {
+		background-color: #e08d1e;
+		color: #ffffff;
+		border: 1px solid #e08d1e;
+		border-radius: 20px;
+		margin-top: 15px;
+	}
+
+	.btncontactform:hover {
+		background-color: #e08d1e;
+		color: #ffffff;
+		border: 1px solid #e08d1e;
+		border-radius: 20px;
+		-webkit-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.29);
+-moz-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.29);
+box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.29);
+	}
+
+	.btncontactform:active {
+		background-color: #e08d1e;
+		color: #ffffff;
+		border: 1px solid #e08d1e;
+		border-radius: 20px;
+	}
+</style>
+
+
+  <footer class="py-5" style="background-color: #0f6524;">
+      <div class="container">
+        <div class="row">
+        <div class="col-lg-4">
+          <div class="innerfooter">
+            <img src="https://res.cloudinary.com/nikasemo/image/upload/v1569926833/igred1white_azjhhy.png" style="height: 61px; width: 250; margin-bottom:10px;">
+            <p style="color: #ffffff; font-size: 14px;">
+            	Cupidatat eu velit sit qui enim minim in est nostrud proident elit eu tempor amet commodo est veniam adipisicing minim qui et nulla est id excepteur ut deserunt officia laboris est in dolor adipisicing ut pariatur ex aliquip duis duis eiusmod occaecat deserunt eu in in tempor id proident do sit ullamco in ex magna sed reprehenderit cupidatat sed voluptate veniam esse dolor dolor nulla adipisicing sunt elit amet esse eiusmod sunt nisi velit minim sit sed in nostrud reprehenderit incididunt dolore elit nostrud adipisicing et deserunt in in aute non est esse pariatur incididunt.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="innerfooter">
+            <h4 class="foothead">Explore</h4>
+             <ul style="list-style:none; padding-left:0; font-family: 'Montserrat', sans-serif; font-weight: 200; line-height: 30px;">
+            <li><a href="/" style="color: #ffffff; font-weight: 300; font-size: 14px; text-decoration:none;">Home</a></li>
+            <li><a href="/ourprofile" style="color: #ffffff; font-weight: 300; font-size: 14px; text-decoration:none;">Our Profile</a></li>
+            <li><a href="/heart" style="color: #ffffff; font-weight: 300; font-size: 14px; text-decoration:none;">Heart of IGRED</a></li>
+            <li><a href="/execboards" style="color: #ffffff; font-weight: 300; font-size: 14px; text-decoration:none;">Executive Board</a></li>
+            <li><a href="/events" style="color: #ffffff; font-weight: 300; font-size: 14px; text-decoration:none;">Events</a></li>
+            <li><a href="/digitallibrary" style="color: #ffffff; font-weight: 300; font-size: 14px; text-decoration:none;">Digital Library</a></li>
+            <li><a href="/partnerships" style="color: #ffffff; font-weight: 300; font-size: 14px; text-decoration:none;">Partnerships</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="innerfooter">
+            <h4 class="foothead">Send a Message</h4>
+            <p style="color: #ffffff; font-size: 14px;">
+            	Send us a contact. Let's get back to you with something special!
+            </p>
+            <form>
+            	<div class="form-group">
+			    <label style="color: #e08d1e; font-weight: 300; font-size: 14px;">First Name</label>
+			    <input type="text" class="form-control" placeholder="Your Name">
+			  </div>
+			  <div class="form-group">
+			    <label style="color: #e08d1e; font-weight: 300; font-size: 14px;">Email address</label>
+			    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Your email">
+			    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+			  </div>
+			  
+			  <div class="form-group">
+			    <label style="color: #e08d1e; font-weight: 300; font-size: 14px;">Your Message</label>
+			    <textarea class="form-control" rows="5" placeholder="Send us a message"></textarea>
+			  </div>
+			  <p style="text-align: center;"><button type="submit" class="btn btn-lg btn-primary btncontactform">Send</button></p>
+			</form>
+          </div>
+        </div>
+        
+      </div>
+      
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <div class="row" style="margin-top: 0px; background-color: #237e39; color: #ffffff; font-size: 14px;">
+        <div class="col-sm-12" style="padding: 20px;">
+        <p class="m-0 text-center" style="font-family: 'Montserrat', sans-serif;">Copyright &copy; IGRED, 2019</p>
+      </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+      
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"></script>
+  </body>
+</html>
